@@ -45,6 +45,7 @@ export class Gitsearch2Service {
         rejects(error);
       }
      })
+     return promise;
      
    }
 }
