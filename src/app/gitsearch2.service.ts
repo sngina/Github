@@ -3,11 +3,6 @@ import { HttpClient} from '@angular/common/http';
 import { environment} from '../environments/environment';
 import { User} from './user';
 import  {RepoDetails} from './repo-details';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { stringify } from '@angular/compiler/src/util';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { rejects } from 'assert';
-import { promise } from 'selenium-webdriver';
 
 //user details
 //repos
@@ -30,6 +25,7 @@ export class Gitsearch2Service {
    }
    //data
    getName(user:string){
+    this.user = new User("","","","");
      interface ApiResponse{
        longin:string,
        avatar_url:string,
@@ -46,7 +42,7 @@ export class Gitsearch2Service {
 
        resolve("it's a Success")
       }),(error:any)=>{
-        rejects(error);
+        reject(error);
       }
      })
      return promise;
@@ -54,10 +50,20 @@ export class Gitsearch2Service {
    }
    //repos
   getUserRepos(user:string) {
+    this.repoData.splice(0 , this.repoData.length)
   let promise = new Promise((resolve,reject) =>{
-    this.http.get<any>('https://api.github.com/users/ + user' + '/repos?access_token='+environment.apikey)
+    this.http.get<any>('https://api.github.com/users/ + user' + '/repos?access_token='+environment.apikey).toPromise().then(response=>{
+      for (var i =0; i<response.length;i++){
+     this.singleRepoData = new RepoDetails(response[i].name,response[i].html_url,response[i].updated_at)
+     this.repoData.push(this.singleRepoData)
+      }
+      resolve('Success')
+    }),(error:any)=>{
+      reject(error)
+    }
 
     
   })
+  return promise;
   } 
 }
