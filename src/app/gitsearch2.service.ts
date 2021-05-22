@@ -5,6 +5,8 @@ import { User} from './user';
 import  {RepoDetails} from './repo-details';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { stringify } from '@angular/compiler/src/util';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { rejects } from 'assert';
 
 //user details
 //repos
@@ -39,7 +41,9 @@ export class Gitsearch2Service {
        this.user.name = response.name,
 
        resolve("it's a Success")
-      })
+      }),(error:any)=>{
+        rejects(error);
+      }
      })
      
    }
