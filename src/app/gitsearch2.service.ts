@@ -7,6 +7,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { stringify } from '@angular/compiler/src/util';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { rejects } from 'assert';
+import { promise } from 'selenium-webdriver';
 
 //user details
 //repos
@@ -18,6 +19,8 @@ export class Gitsearch2Service {
   //blueprint at classes
   user!:User;
   repo!:RepoDetails;
+  repoData:any = [];
+  singleRepoData:any =[];
 
 
   constructor(private http:HttpClient) {
@@ -25,6 +28,7 @@ export class Gitsearch2Service {
     this.repo = new RepoDetails("","",new Date()); // from the repos
 
    }
+   //data
    getName(user:string){
      interface ApiResponse{
        longin:string,
@@ -48,4 +52,12 @@ export class Gitsearch2Service {
      return promise;
      
    }
+   //repos
+  getUserRepos(user:string) {
+  let promise = new Promise((resolve,reject) =>{
+    this.http.get<any>('https://api.github.com/users/ + user' + '/repos?access_token='+environment.apikey)
+
+    
+  })
+  } 
 }
