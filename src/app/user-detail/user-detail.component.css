@@ -2,3 +2,9 @@ img{
    height: 200px;
    width: 200px;
 }
+.repo{
+    background-color: darkgray;
+    height: 80%;
+    width: 90%;
+    padding: 10px;
+}
