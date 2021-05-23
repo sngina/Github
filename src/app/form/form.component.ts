@@ -20,7 +20,7 @@ export class FormComponent implements OnInit {
 
   submitUser(){
     this.githubservice.getName(this.search)
-    console.log(this.search)
+    // console.log(this.search)
   }
   
 

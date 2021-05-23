@@ -10,18 +10,18 @@ import  {RepoDetails} from '../repo-details'
 })
 export class UserDetailComponent implements OnInit {
 
-  holdUserDetails! : User;
-  repodata :any = [];
+  holdUserDetails!:User;
+  repodata:any =[];
   githubservice: any;
   constructor(gitservice:Gitsearch2Service ){
     this.githubservice = gitservice
    }
     displayUserDetail(){
-      
+     
     }
   ngOnInit(): void {
     this.repodata =this.githubservice.repoData
-    this.holdUserDetails=this.githubservice.user  
-  
+    this.holdUserDetails=this.githubservice.user
+    console.log(this.repodata)
   }
 }
