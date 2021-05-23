@@ -11,7 +11,7 @@ import {User} from '../user';
 export class FormComponent implements OnInit {
   githubservice:any;
 
-  search!:string;
+  search:string="";
    
   
   constructor(gitservice:Gitsearch2Service ){
@@ -20,7 +20,7 @@ export class FormComponent implements OnInit {
 
   submitUser(){
     this.githubservice.getName(this.search)
-    
+    console.log(this.search)
   }
   
 

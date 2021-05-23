@@ -1,4 +1,6 @@
-<form (submitUser)='submitUser()'>
+<form (ngSubmit)='submitUser()'>
     <input type="text" class="form-control m-3" placeholder="Search..." [(ngModel)]='search' name='search'><br>
     <button type="submit" class='btn btn-primary m-3'>Submit</button>
   </form>
+  <hr>
+  <app-user-detail></app-user-detail>
