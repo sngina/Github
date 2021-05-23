@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { from } from 'rxjs';
+import { Form } from '@angular/forms';
 import {Gitsearch2Service } from './gitsearch2.service';
 import {User} from './user'
 import  {RepoDetails} from './repo-details'

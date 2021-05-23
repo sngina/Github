@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// import {Gitsearch2Service } from './gitsearch2.service';
+// import {User} from './user'
+
 
 @Component({
   selector: 'app-form',
@@ -6,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-
+    
+  
   constructor() { }
 
   ngOnInit(): void {

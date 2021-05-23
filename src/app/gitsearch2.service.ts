@@ -3,6 +3,8 @@ import { HttpClient} from '@angular/common/http';
 import { environment} from '../environments/environment';
 import { User} from './user';
 import  {RepoDetails} from './repo-details';
+import  { Form } from '@angular/forms';
+
 
 
 //user details
