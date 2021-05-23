@@ -23,12 +23,11 @@ export class Gitsearch2Service {
 
   constructor(private http: HttpClient) {
     this.user = new User("", "", "", "");  // from user
-    this.repo = new RepoDetails("", "", new Date()); // from the repos
+    this.repo = new RepoDetails("Stella", "", new Date()); // from the repos
 
   }
   //data
   getName(user: string) {
-    this.user = new User("", "", "", "");
     interface ApiResponse {
       login: string,
       avatar_url: string,
@@ -48,7 +47,7 @@ export class Gitsearch2Service {
         reject(error);
       }
 
-      this.repoData.splice(0, this.repoData.length)
+      // this.repoData.splice(0, this.repoData.length)
 
       this.http.get<any>('https://api.github.com/users/' + user).toPromise().then(response => {
         for (var i = 0; i < response.length; i++) {
