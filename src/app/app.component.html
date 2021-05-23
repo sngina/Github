@@ -1,18 +1,10 @@
-<div class="container">
+<div class="container search">
   <p>App Components Working</p>
   <h3>Search</h3>
-  <form (submitUser)='submitUser()'>
-    <input type="text" class="form-control m-3" placeholder="Search..." [(ngModel)]='search' name='search'><br>
-    <button type="submit" class='btn btn-primary m-3'>Submit</button>
-  </form>
   <hr>
-  <h3>User Details</h3>
-  <button (click)='displayUserDetail()'>Display</button>
-  <p>Login name {{ holdUserDetails.login }}</p>
-  <a href="{{holdUserDetails.repos_url }}">Repo links</a>
-  <img src='{{ holdUserDetails.avatar_url }}'>
-  <p>{{ holdUserDetails.name }}</p>
-  <hr>
+  
   <h3>User Repos</h3>
+  <app-form></app-form>
   <router-outlet></router-outlet>
+  
 </div>

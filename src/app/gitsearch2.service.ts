@@ -47,14 +47,9 @@ export class Gitsearch2Service {
       }),(error:any)=>{
         reject(error);
       }
-     })
-     return promise;
      
-   }
-   //repos
-  getUserRepos(user:string) {
     this.repoData.splice(0 , this.repoData.length)
-  let promise = new Promise((resolve,reject) =>{
+  
     this.http.get<any>('https://api.github.com/users/'+ user + '/repos?access_token='+environment.apikey).toPromise().then(response=>{
       for (var i =0; i<response.length;i++){
      this.singleRepoData = new RepoDetails(response[i].name,response[i].html_url,response[i].updated_at)
