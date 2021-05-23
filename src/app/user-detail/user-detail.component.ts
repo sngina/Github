@@ -16,12 +16,10 @@ export class UserDetailComponent implements OnInit {
   constructor(gitservice:Gitsearch2Service ){
     this.githubservice = gitservice
    }
-    displayUserDetail(){
-     
-    }
+  
   ngOnInit(): void {
     this.repodata =this.githubservice.repoData
     this.holdUserDetails=this.githubservice.user
-    console.log(this.repodata)
+  
   }
 }

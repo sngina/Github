@@ -49,7 +49,7 @@ export class Gitsearch2Service {
 
       // this.repoData.splice(0, this.repoData.length)
 
-      this.http.get<any>('https://api.github.com/users/' + user).toPromise().then(response => {
+      this.http.get<any>('https://api.github.com/users/' + user + '/repos').toPromise().then(response => {
         for (var i = 0; i < response.length; i++) {
           this.singleRepoData = new RepoDetails(response[i].name, response[i].html_url, response[i].updated_at)
           this.repoData.push(this.singleRepoData)

@@ -1,5 +1,4 @@
  <div class="container  detail">
-  <button (click)='displayUserDetail()'>Display</button>
   <p>Login name {{ holdUserDetails.login }}</p>
   <a href="{{holdUserDetails.repos_url }}">Repo links</a>
   <img src='{{ holdUserDetails.avatar_url }}'>
@@ -7,7 +6,7 @@
   <hr>
 </div>
 <div *ngFor = 'let repo of repodata;let i =index'>
-    <p>{{repo}}</p>
-    <p>{{repo}}</p>
+    <p>{{repo.name}}</p>
+    <p>{{repo.repos_url}}</p>
     
 </div>
