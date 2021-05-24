@@ -1,4 +1,26 @@
 # Github
+#### This a project that one is able to search his github name
+#### By **Stella Ngina**
+## Description
+This is a project that one is able to search for his github name and the repos
+## Setup/Installation Requirements
+* Clone the repo https://sngina.github.io/quotes/
+$ cd ../path/to/the/file
+$ npm install
+$ npm start
+
+
+
+## Live link
+https://sngina.github.io/quotes/
+## Known Bugs
+There are no known bugs. 
+## Technologies Used
+The languages used is Angular
+## Support and contact details
+In case of any issues or bugs you can contact me through my email address sngina707@gmail.com.
+### License
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
