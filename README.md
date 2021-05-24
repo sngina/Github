@@ -4,7 +4,7 @@
 ## Description
 This is a project that one is able to search for his github name and the repos
 ## Setup/Installation Requirements
-* Clone the repo https://sngina.github.io/quotes/
+* Clone the repo https://sngina.github.io/Github/
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
@@ -12,14 +12,14 @@ $ npm start
 
 
 ## Live link
-https://sngina.github.io/quotes/
+https://sngina.github.io/Github/
 ## Known Bugs
 There are no known bugs. 
 ## Technologies Used
 The languages used is Angular
 ## Support and contact details
 In case of any issues or bugs you can contact me through my email address sngina707@gmail.com.
-### License
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
@@ -47,3 +47,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+### License
+This is under the [MIT](LICENSE) license
+Copyright (c) 2021 **Stella Ngina**
+
+
